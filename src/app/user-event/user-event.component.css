@@ -1,0 +1,163 @@
+.con-container{
+  margin: 0 35% 0 5%;
+  background: #f8f8f8;
+}
+.container{    
+  margin: 0% 10% ;
+  justify-content: space-evenly;
+}
+.container .msg{
+  margin-top: 3%;
+  margin-left: 5%;
+  background: #d02366;
+  color: aliceblue;
+  width: 75%;
+  height: 150px;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: small;
+
+}
+.bdaynames{
+font-size: larger;
+font-weight: bold;
+text-transform: capitalize;
+}
+
+.container .events{
+  margin-top: 1%;
+    margin-left:5% ;
+    background-color: #ededed4a;
+    width: 75%;
+}
+.container .nav-center{
+  margin-top: 1%;
+  margin-left: 5%;
+  color: rgb(81, 81, 81);
+}
+.events{
+    padding: 1%;
+   
+}
+.events .card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    height:10%;
+    padding: 1%;
+    margin-top: 2%;
+    flex-direction: row;
+  }
+  
+  .card p, .card-title{
+    margin: 0;
+  }
+
+  .card-body{
+    display: grid;
+    width: 50%;
+    padding: 0 10px;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 30% 50% ;
+    justify-content: space-evenly;
+    align-content: space-between;
+  }
+  .card-age{
+    padding-top: 3%;
+    font-size: x-small;
+  }
+  .card-container{
+    padding: 2px;
+    border: 1px solid #fff4f8;
+  }
+  .card-days{
+    grid-row:1 / span 2;
+    grid-column: 2;
+        font-size: larger ;
+        color: aqua;
+        place-content: center;
+        
+    padding: 5%;
+    margin:10px 0;
+    height: 20px;
+    width: 75px;
+    padding: 0px;
+    background-color: #d02366;
+    color: white;
+    font-size: small;
+    text-align: center;
+
+  }
+  .inline{
+    max-width:400px;
+    margin:auto;
+}
+.input-icons i {
+    position: relative;
+}
+  
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+  
+.icon {
+    padding: 10px;
+    min-width: 40px;
+}
+  
+.input-field {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+ 
+  .input-field h1{
+    font-size: 14px;
+    color: #0016ff;
+  }
+
+
+
+  .form-control:focus {
+    box-shadow: none;
+  }
+  .form-control-underlined {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    padding-left: 0;
+  }
+  .input-group-append{
+    font-size:20px;
+    background-color: rgb(251 251 251);
+    padding: 1% 2%
+  }
+  .send{
+    padding: 5px;
+  }
+
+  .card .card-img-top{
+    height:40px;
+    width: auto;
+    margin: 0% 0 0% 5%;
+  }
+  a img {
+    height: 20px;
+  }
+  .fa-input {
+    font-family: FontAwesome, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  .wish-icon{
+    height:40px;
+    width: auto;
+    margin: 0% 0 0% 5%;
+  }
+.message-box{
+display: none;
+
+}
+  .hidden {
+    display: visible;
+ }

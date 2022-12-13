@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="emp">
+                <div class="col-sm-8">
+                    <h2>Employee <b>Details</b></h2>
+                </div>
+
+            </div>
+        </div>
+        <!-- test below -->
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                    <th>email ID</th>
+                    <th>Date of Birth</th>
+                    <th> Team No.</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+
+            <tbody>
+                <tr *ngFor="let emp of emps; index as i;" class="hover-highlight">
+
+                    <td class="benchmark_name">
+                        {{emp.emp_id}}
+                      
+                    </td>
+                    <td>
+                        {{emp.emp_name}}
+                    </td>
+                    <td>
+                        {{emp.username}}
+                    </td>
+                    <td>
+                        {{emp.dob}}
+                 </td>
+
+                    <td>
+                        <span *ngIf="!enableEdit">{{emp.team_id}}</span>
+                        <input type="number" class="form-control" [(ngModel)]="emp.team_id" *ngIf="enableEdit"/>
+      
+                    </td>
+                    <td>
+                        <button *ngIf="enableEdit && enableEditIndex == i" (click)="enableEdit=false"
+                            class="btn page-secondary-action-btn" ng-click="cancel()">Cancel</button>
+                        <button *ngIf="enableEdit && enableEditIndex == i" id="saveBtn"
+                            class="btn page-primary-action-btn" (click)="saveUpdate(emp.team_id,emp.emp_id)" type="submit">Save</button>
+
+
+                        <a  class="table-emp-action edit-action" *ngIf="!enableEdit"
+                            (click)="enableEditMethod( i)">
+                            edit
+                        </a>
+
+
+                    </td>
+                    
+
+                  
+                 
+                </tr>
+            </tbody>
+        </table> -->
+    </div>
+</div>

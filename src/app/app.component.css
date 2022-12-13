@@ -1,0 +1,51 @@
+.navbar{
+    height: auto;
+    padding-top:0px ;
+    padding: 0px 150px;
+    font-size: medium;
+    justify-content: start;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    overflow: visible;
+}
+
+.navbar-brand img{
+    height: 40px;
+}
+.form-control{
+    height:2%;
+    padding-top: 5px;
+}
+.form-control:focus {
+    border-color: white;
+    box-shadow: 0 0 0 0.2rem rgb(201 202 203 / 25%);
+}
+ul{
+    right: 10%;
+    position:absolute;
+}
+ul li{
+    display: inline;
+    justify-items: end;
+}
+.container .msg{    
+    background: #fdf0ff;
+    width: 100%;
+}
+
+ul li a{
+    margin:0 15px;
+   
+}
+.card{
+    top: 40px;
+}
+
+.profile-pic{
+    height: 42px;
+
+}
+.profile-button{
+    background: #fbfbfb;
+    padding-top: 17px;
+    border: 0px;
+}

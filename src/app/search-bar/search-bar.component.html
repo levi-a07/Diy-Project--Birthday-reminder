@@ -1,0 +1,19 @@
+<div class="input-group drop-down 
+col-sm-3 align-self-center mr-3">
+  <input id="empSearchInput" 
+   [(ngModel)]="searchStr" #empSearchInput placeholder="Search for colleague" class="form-control mr-2 rounded-pill"
+    type="text" autocomplete="off">
+
+<!--  DropDown Starts  -->
+<div class="card dropdown-menu" [hidden]="!showSearches ">
+  <div class="search"  >
+
+    <div *ngFor="let emp of searchedEmps.slice(0, 4); trackBy: trackById" tappable (click)="setEmpname(emp.emp_name)"
+      class="search-result" >
+      <a class="dropdown-item"  (click)="search($event,emp.emp_id)" > {{emp.emp_name}}</a>
+    </div>
+  </div>
+  <p class="search dropdown-item" *ngIf="searchedEmps && searchedEmps.length <= 0 && !isSearching  ">No Employee found</p>
+  <p class="search" [hidden]="!isSearching">Searching colleague..</p>
+</div>
+<!--  DropDown Ends  --></div>

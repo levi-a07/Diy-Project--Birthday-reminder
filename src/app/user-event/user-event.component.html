@@ -1,0 +1,69 @@
+<div class="con-container">
+    <div class=" container container d-flex align-items-center justify-content-start">
+
+        <div class="msg">
+<img src="../../assets/confetti.png " style="height:90px ;" alt="">
+            Wish <span class="bdaynames"> {{bdayEmp}}  </span> Happy Birthday
+            <br> Lorem ipsum dolor sit  ullam aliquam accusamus.
+            
+        </div>
+    </div>
+    <div class=" container  d-flex align-items-center justify-content-start">
+        <div class="nav-center">
+            <a href="#"  style=" text-decoration: none; ">Upcoming Birthdays</a>
+        </div>
+    </div>
+    <div class=" container container-cal d-flex align-items-center justify-content-start">
+
+        <div class="events" >
+
+            <div class="card-container" *ngFor="let emp of filteredEmployee ">
+                <div class="noBday"  *ngIf="filteredEmployee.length==0"> 
+                    <img src="../../assets/folder.png" style="height:335px ;    margin: 40px 215px;">
+                </div>
+                <div class="card" *ngIf="filteredEmployee.length>0">
+                    <img src="../../assets/calendar.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a [routerLink]="['/employee/',emp.emp_id]">
+                            <h5 class="card-title">{{emp.emp_name}}</h5>
+                        </a>
+
+                        <p class="card-days rounded-pill"> {{daysleft(emp.dob)}} Days</p>
+                        <p class="card-age">turns {{age(emp.dob)}} on {{upcomingBday(emp.dob)|date}}</p>
+
+                    </div>
+                    <div>
+                        <!-- <div #ContentElement>gdfgfdgdf</div>
+                        <button (click)="toggle(ContentElement)">Toggle</button>
+                         -->
+                        <a (click)="toggle(ContentElement)">
+                            <img class="wish-icon" src="../../assets/chat.png">
+                        </a>
+
+                    </div>
+
+
+                </div>
+                <div #ContentElement [id]="emp.emp_id" class="message-box">
+
+                    <form #form="ngForm" class="input-group" (ngSubmit)="onsubmit(form,emp.emp_id)">
+
+                        <input type="text" placeholder="Send wishes here.." class="form-control border-0 "
+                            [id]="'wish'+emp.emp_id" name="wish" #wish="ngModel" ngModel>
+
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-primary btn-sm">send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+</div>
